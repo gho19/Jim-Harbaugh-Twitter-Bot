@@ -15,8 +15,8 @@ auth = tp.OAuthHandler(consumer_key, secret_key)
 auth.set_access_token(access_token, secret_access)
 api = tp.API(auth)
 
-os.chdir('joe_biden')
+os.chdir('jim_harbaugh')
 for pic in os.listdir('.'):
   # update status for string based Tweet
-  api.update_with_media(pic, '#Biden2020 #StayAtHome #Obama #TrumpLiedPeopleDied')
+  api.update_with_media(pic, '#GoBlue')
   time.sleep(5)
