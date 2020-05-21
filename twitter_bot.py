@@ -1,4 +1,3 @@
-# ShakespeareanBot
 
 import tweepy as tp
 import time
