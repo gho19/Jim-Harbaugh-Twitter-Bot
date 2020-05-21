@@ -15,8 +15,8 @@ soup = bs(page.text, 'html.parser')
 image_tags = soup.findAll('img')
 
 # creates directory for Jim Harbaugh images
-if not os.path.exists('joe_biden'):
-  os.makedirs('joe_biden')
+if not os.path.exists('jim_harbaugh'):
+  os.makedirs('jim_harbaugh')
 
 # move to new directory
 os.chdir('jim_harbaugh')
