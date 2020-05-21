@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup as bs
 import os
 
 # Website with Jim Harbaugh Images
-url = 'https://www.shutterstock.com/search/joe+biden'
+url = 'https://gettyimages.com/photos/jim-harbaugh'
 
 # Download Page for Parsing
 page = requests.get(url)
@@ -19,7 +19,7 @@ if not os.path.exists('joe_biden'):
   os.makedirs('joe_biden')
 
 # move to new directory
-os.chdir('joe_biden')
+os.chdir('jim_harbaugh')
 
 # image file new variable
 x = 0
@@ -30,7 +30,7 @@ for image in image_tags:
     url = image['src']
     source = requests.get(url)
     if source.status_code == 200:
-      with open('joe_biden-' + str(x) + '.jpg', 'wb') as f:
+      with open('jim_harbaugh-' + str(x) + '.jpg', 'wb') as f:
         f.write(requests.get(url).content)
         f.close()
         x += 1
